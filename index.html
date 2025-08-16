@@ -7,39 +7,113 @@
     <style>
         body {
             font-family: Georgia, serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
             color: #333;
             background-color: #fff;
+            font-size: 14px;
         }
         
-        h1 {
-            font-size: 1.8em;
-            font-weight: normal;
-            margin-bottom: 0.5em;
-            margin-top: 0;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
         }
         
-        h2 {
+        /* Left Sidebar */
+        .sidebar {
+            width: 200px;
+            flex-shrink: 0;
+            border-right: 1px solid #ddd;
+            padding-right: 20px;
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+        }
+        
+        .sidebar h1 {
             font-size: 1.4em;
             font-weight: bold;
-            margin-top: 2.5em;
-            margin-bottom: 1em;
+            margin: 0 0 10px 0;
             color: #222;
         }
         
-        h3 {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-top: 2em;
-            margin-bottom: 0.8em;
-            color: #333;
+        .sidebar p {
+            margin: 8px 0;
+            font-size: 13px;
+            line-height: 1.4;
         }
         
-        p {
-            margin-bottom: 1.2em;
+        .sidebar a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 0 20px;
+        }
+        
+        .contact-info {
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+        
+        h2 {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 30px 0 20px 0;
+            color: #222;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        .paper {
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .paper-title {
+            font-weight: bold;
+            color: #0066cc;
+            font-size: 14px;
+        }
+        
+        .paper-authors {
+            margin: 3px 0;
+            font-size: 14px;
+        }
+        
+        .paper-venue {
+            margin: 3px 0;
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+        .paper-synopsis {
+            margin: 3px 0;
+            color: #555;
+            font-size: 14px;
         }
         
         a {
@@ -51,141 +125,220 @@
             text-decoration: underline;
         }
         
-        .paper {
-            margin-bottom: 2em;
-            line-height: 1.5;
+        /* Right Column */
+        .right-column {
+            width: 250px;
+            flex-shrink: 0;
+            border-left: 1px solid #ddd;
+            padding-left: 20px;
+            font-size: 13px;
         }
         
-        .paper-title {
+        .right-column h3 {
+            font-size: 1.2em;
             font-weight: bold;
-            color: #0066cc;
-            font-size: 1em;
+            margin: 0 0 15px 0;
+            color: #222;
         }
         
-        .paper-authors {
-            margin: 0.3em 0;
+        .right-column p {
+            margin: 10px 0;
+            line-height: 1.4;
         }
         
-        .paper-venue {
-            margin: 0.3em 0;
-            font-style: italic;
+        .right-column ul {
+            padding-left: 18px;
+            margin: 10px 0;
         }
         
-        .paper-synopsis {
-            margin: 0.3em 0;
-            color: #555;
-        }
-        
-        .contact-info {
-            margin-bottom: 2em;
+        .right-column li {
+            margin: 5px 0;
+            line-height: 1.4;
         }
         
         /* Responsive design */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                padding-right: 0;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+            
+            .right-column {
+                width: 100%;
+                border-left: none;
+                border-top: 1px solid #ddd;
+                padding-left: 0;
+                padding-top: 20px;
+            }
+            
+            .main-content {
+                padding: 0;
+            }
+        }
+        
         @media (max-width: 600px) {
             body {
-                padding: 20px 15px;
+                padding: 15px;
+                font-size: 13px;
             }
             
-            h1 {
-                font-size: 1.6em;
-            }
-            
-            h2 {
-                font-size: 1.3em;
+            .profile-photo {
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="contact-info">
-        <p>You can contact me at <a href="mailto:your.email@university.edu">your.email@university.edu</a>. Here is a copy of my <a href="files/cv.pdf">cv</a>.</p>
-        <p>My spouse runs the acclaimed food blog <a href="#">Amazing Food Blog</a>.</p>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <img src="https://via.placeholder.com/150x150/cccccc/666666?text=Your+Photo" alt="Your Name" class="profile-photo">
+            <h1>Your Name</h1>
+            <p><strong>Associate Professor</strong><br>
+            Department of Philosophy<br>
+            Your University</p>
+            
+            <p><strong>Research Interests:</strong><br>
+            AI Safety, Epistemology, Philosophy of Language</p>
+            
+            <p><strong>Email:</strong><br>
+            <a href="mailto:your.email@university.edu">your.email@university.edu</a></p>
+            
+            <p><a href="files/cv.pdf">Download CV</a></p>
+            
+            <p><strong>Links:</strong><br>
+            <a href="#">Google Scholar</a><br>
+            <a href="#">PhilPapers</a><br>
+            <a href="#">ORCID</a></p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="contact-info">
+                <p>You can contact me at <a href="mailto:your.email@university.edu">your.email@university.edu</a>. Here is a copy of my <a href="files/cv.pdf">cv</a>.</p>
+                <p>My spouse runs the acclaimed food blog <a href="#">Amazing Food Blog</a>.</p>
+            </div>
+
+            <h2>AI Research</h2>
+            
+            <div class="paper">
+                <div class="paper-title"><a href="#">AI survival stories</a></div>
+                <div class="paper-authors">Coauthored with <a href="#">Herman Cappelen</a> and <a href="#">John Hawthorne</a></div>
+                <div class="paper-venue">Philosophy of AI forthcoming</div>
+                <div class="paper-synopsis">Synopsis: There are four paths to humanity surviving AI. Each path faces distinctive challenges, and rationalizes distinctive solutions.</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title"><a href="#">AI rights for human safety</a></div>
+                <div class="paper-authors">Coauthored with <a href="#">Peter Salib</a></div>
+                <div class="paper-venue">Virginia Law Review 2025</div>
+                <div class="paper-synopsis">Synopsis: If we give AGIs rights, they will be less likely to destroy humanity.</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title"><a href="#">Will AI and humanity go to war?</a></div>
+                <div class="paper-venue">AI & Society forthcoming</div>
+                <div class="paper-synopsis">Synopsis: AGI and humanity are likely to go to war in the future, because of disagreements about the chance of victory, shifts in the relative power of AGI and humanity, and missing focal points that prevent coordination.</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title"><a href="#">LLMs cannot be ideally rational</a></div>
+                <div class="paper-venue">under review</div>
+                <div class="paper-synopsis">Synopsis: LLMs are architecturally guaranteed to output intransitive preferences over choices and probabilistically incoherent predictions about the world.</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title"><a href="#">A case for AI consciousness: language agents and the global workspace</a></div>
+                <div class="paper-authors">Coauthored with <a href="#">Cameron Domenico Kirk-Giannini</a></div>
+                <div class="paper-venue">under review</div>
+                <div class="paper-synopsis">Synopsis: AI agents built on top of large language models come close to being conscious according to global workspace theory.</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title"><a href="#">Does ChatGPT have a mind?</a></div>
+                <div class="paper-authors">Coauthored with <a href="#">Ben Levinstein</a></div>
+                <div class="paper-venue">under review</div>
+                <div class="paper-synopsis">Synopsis: ChatGPT has robust internal representations, and may act in complex enough ways to have beliefs and desires.</div>
+            </div>
+
+            <h2>Other Research</h2>
+
+            <div class="paper">
+                <div class="paper-title"><a href="#">A semantic theory of redundancy</a></div>
+                <div class="paper-authors">Coauthored with <a href="#">Kyle Blumberg</a></div>
+                <div class="paper-venue">Linguistics and Philosophy forthcoming</div>
+                <div class="paper-synopsis">Synopsis: Many linguistic effects can be explained through the covert presence of a semantic redundancy operator.</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title"><a href="#">KK is wrong because we say so</a></div>
+                <div class="paper-authors">Coauthored with <a href="#">John Hawthorne</a></div>
+                <div class="paper-venue">Mind forthcoming</div>
+                <div class="paper-synopsis">Synopsis: KK is wrong because we say so.</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title"><a href="#">Iterated knowledge</a></div>
+                <div class="paper-venue">Oxford University Press forthcoming</div>
+                <div class="paper-synopsis">Synopsis: omega knowledge, or infinitely iterated knowledge, plays an important role in philosophy. It is neither scarce nor identical to knowledge.</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title"><a href="#">Safety, closure, and extended methods</a></div>
+                <div class="paper-authors">Coauthored with <a href="#">John Hawthorne</a></div>
+                <div class="paper-venue">Journal of Philosophy forthcoming</div>
+                <div class="paper-synopsis">Synopsis: if knowledge requires belief that is safe from error, then knowledge is not preserved by deduction.</div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <h3>Teaching</h3>
+            
+            <p><strong>Current Courses (2025):</strong></p>
+            <ul>
+                <li><strong>PHIL 101:</strong> Introduction to Philosophy</li>
+                <li><strong>PHIL 340:</strong> Philosophy of Mind</li>
+                <li><strong>PHIL 485:</strong> Advanced Topics in AI Ethics</li>
+            </ul>
+            
+            <p><strong>Previous Courses:</strong></p>
+            <ul>
+                <li>Epistemology (PHIL 320)</li>
+                <li>Logic and Reasoning (PHIL 210)</li>
+                <li>Philosophy of Language (PHIL 360)</li>
+                <li>Philosophical Logic (PHIL 450)</li>
+            </ul>
+            
+            <p><strong>Teaching Philosophy:</strong></p>
+            <p>I believe in making complex philosophical concepts accessible through careful analysis and real-world examples. My courses emphasize critical thinking and the practical applications of philosophical reasoning.</p>
+            
+            <p><strong>Office Hours:</strong><br>
+            Tuesdays & Thursdays<br>
+            2:00-4:00 PM<br>
+            Room 304, Philosophy Dept.</p>
+            
+            <p><strong>Supervision:</strong></p>
+            <p>I am currently accepting graduate students interested in AI ethics, epistemology, and philosophy of language. Please contact me if you're interested in working together.</p>
+            
+            <h3>News & Updates</h3>
+            
+            <p><strong>August 2025:</strong> New paper accepted at Virginia Law Review on AI rights and safety.</p>
+            
+            <p><strong>July 2025:</strong> Presenting at the International Conference on AI Safety in Oxford.</p>
+            
+            <p><strong>June 2025:</strong> Started new collaboration with researchers at the Center for AI Safety.</p>
+        </div>
     </div>
-
-    <h2>AI Research</h2>
-    
-    <div class="paper">
-        <div class="paper-title"><a href="#">AI survival stories</a></div>
-        <div class="paper-authors">Coauthored with <a href="#">Collaborator Name</a> and <a href="#">Another Collaborator</a></div>
-        <div class="paper-venue">Philosophy of AI forthcoming</div>
-        <div class="paper-synopsis">Synopsis: There are four paths to humanity surviving AI. Each path faces distinctive challenges, and rationalizes distinctive solutions.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">AI rights for human safety</a></div>
-        <div class="paper-authors">Coauthored with <a href="#">Collaborator Name</a></div>
-        <div class="paper-venue">Virginia Law Review 2025</div>
-        <div class="paper-synopsis">Synopsis: If we give AGIs rights, they will be less likely to destroy humanity.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">Will AI and humanity go to war?</a></div>
-        <div class="paper-venue">AI & Society forthcoming</div>
-        <div class="paper-synopsis">Synopsis: AGI and humanity are likely to go to war in the future, because of disagreements about the chance of victory, shifts in the relative power of AGI and humanity, and missing focal points that prevent coordination.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">LLMs cannot be ideally rational</a></div>
-        <div class="paper-venue">under review</div>
-        <div class="paper-synopsis">Synopsis: LLMs are architecturally guaranteed to output intransitive preferences over choices and probabilistically incoherent predictions about the world.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">A case for AI consciousness: language agents and the global workspace</a></div>
-        <div class="paper-authors">Coauthored with <a href="#">Collaborator Name</a></div>
-        <div class="paper-venue">under review</div>
-        <div class="paper-synopsis">Synopsis: AI agents built on top of large language models come close to being conscious according to global workspace theory.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">Does ChatGPT have a mind?</a></div>
-        <div class="paper-authors">Coauthored with <a href="#">Collaborator Name</a></div>
-        <div class="paper-venue">under review</div>
-        <div class="paper-synopsis">Synopsis: ChatGPT has robust internal representations, and may act in complex enough ways to have beliefs and desires.</div>
-    </div>
-
-    <h2>Other Research</h2>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">A semantic theory of redundancy</a></div>
-        <div class="paper-authors">Coauthored with <a href="#">Collaborator Name</a></div>
-        <div class="paper-venue">Linguistics and Philosophy forthcoming</div>
-        <div class="paper-synopsis">Synopsis: Many linguistic effects can be explained through the covert presence of a semantic redundancy operator.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">KK is wrong because we say so</a></div>
-        <div class="paper-authors">Coauthored with <a href="#">Collaborator Name</a></div>
-        <div class="paper-venue">Mind forthcoming</div>
-        <div class="paper-synopsis">Synopsis: KK is wrong because we say so.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">Iterated knowledge</a></div>
-        <div class="paper-venue">Oxford University Press forthcoming</div>
-        <div class="paper-synopsis">Synopsis: omega knowledge, or infinitely iterated knowledge, plays an important role in philosophy. It is neither scarce nor identical to knowledge.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">Safety, closure, and extended methods</a></div>
-        <div class="paper-authors">Coauthored with <a href="#">Collaborator Name</a></div>
-        <div class="paper-venue">Journal of Philosophy forthcoming</div>
-        <div class="paper-synopsis">Synopsis: if knowledge requires belief that is safe from error, then knowledge is not preserved by deduction.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">Attitude verbs' local context</a></div>
-        <div class="paper-authors">Coauthored with <a href="#">Collaborator Name</a></div>
-        <div class="paper-venue">Linguistics and Philosophy forthcoming</div>
-        <div class="paper-synopsis">Synopsis: 'Ann wants Bill to stop smoking' presupposes that Ann thinks Bill used to smoke. Recent theories of presupposition do not predict this.</div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title"><a href="#">A question-sensitive theory of intention</a></div>
-        <div class="paper-authors">Coauthored with <a href="#">Collaborator Name</a></div>
-        <div class="paper-venue">Philosophical Quarterly forthcoming</div>
-        <div class="paper-synopsis">Synopsis: intention is question-sensitive.</div>
-    </div>
-
 </body>
 </html>
