@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WX73YHKM3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-2WX73YHKM3');
-</script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-2WX73YHKM3');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Calum McNamara</title>
+
     <style>
         body {
             font-family: Georgia, serif;
@@ -21,20 +28,15 @@
             background-color: #fff;
             font-size: 14px;
         }
-        
-        .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-    margin-top: 40px;
-}
 
-.right-column h3:last-of-type {
-    margin-top: 40px;
-}
-        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
         /* Left Sidebar */
         .sidebar {
             width: 200px;
@@ -42,105 +44,95 @@
             border-right: 1px solid #ddd;
             padding-right: 20px;
         }
-        
+
         .profile-photo {
-    width: 250px !important;
-    height: 250px !important;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 45% 60%;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    display: block;
-    max-width: 180px;
-    max-height: 180px;
-}
-        
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 45% 60%;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            display: block;
+        }
+
         .sidebar h1 {
             font-size: 1.4em;
             font-weight: bold;
-            margin: 0 0 10px 0;
+            margin: 0 0 10px;
             color: #222;
         }
-        
+
         .sidebar p {
             margin: 8px 0;
             font-size: 13px;
             line-height: 1.4;
         }
-        
+
         .sidebar a {
             color: #0066cc;
             text-decoration: none;
         }
-        
+
         .sidebar a:hover {
             text-decoration: underline;
         }
-        
+
         /* Main Content */
         .main-content {
             flex: 1;
+            min-width: 0;
             padding: 0 20px;
         }
-        
-        .contact-info {
-            margin-bottom: 25px;
-            font-size: 14px;
-        }
-        
-        .contact-info p {
-            margin: 5px 0;
-        }
-        
+
         h2 {
             font-size: 1.3em;
             font-weight: bold;
-            margin: 30px 0 20px 0;
+            margin: 30px 0 20px;
             color: #222;
         }
-        
+
         h2:first-of-type {
             margin-top: 0;
         }
-        
+
         .paper {
             margin-bottom: 20px;
             line-height: 1.4;
         }
-        
+
         .paper-title {
             font-weight: bold;
             color: #0066cc;
             font-size: 14px;
         }
-        
+
         .paper-authors {
             margin: 3px 0;
             font-size: 14px;
         }
-        
+
         .paper-venue {
             margin: 3px 0;
             font-style: italic;
             font-size: 14px;
         }
-        
+
         .paper-synopsis {
             margin: 3px 0;
             color: #555;
             font-size: 14px;
         }
-        
+
         a {
             color: #0066cc;
             text-decoration: none;
         }
-        
+
         a:hover {
             text-decoration: underline;
         }
-        
+
         /* Right Column */
         .right-column {
             width: 250px;
@@ -149,37 +141,30 @@
             padding-left: 20px;
             font-size: 13px;
         }
-        
+
         .right-column h3 {
             font-size: 1.2em;
             font-weight: bold;
-            margin: 0 0 15px 0;
+            margin: 0 0 15px;
             color: #222;
         }
-        
+
+        .right-column h3:not(:first-child) {
+            margin-top: 40px;
+        }
+
         .right-column p {
             margin: 10px 0;
             line-height: 1.4;
         }
-        
-        .right-column ul {
-    list-style: none;
-    padding-left: 18px;
-    margin: 10px 0;
-}
 
-.right-column li {
-    margin: 5px 0;
-    line-height: 1.4;
-}
-        
         /* Responsive design */
         @media (max-width: 900px) {
             .container {
                 flex-direction: column;
                 gap: 20px;
             }
-            
+
             .sidebar {
                 width: 100%;
                 border-right: none;
@@ -188,7 +173,12 @@
                 padding-bottom: 20px;
                 text-align: center;
             }
-            
+
+            .profile-photo {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
             .right-column {
                 width: 100%;
                 border-left: none;
@@ -196,18 +186,18 @@
                 padding-left: 0;
                 padding-top: 20px;
             }
-            
+
             .main-content {
                 padding: 0;
             }
         }
-        
+
         @media (max-width: 600px) {
             body {
                 padding: 15px;
                 font-size: 13px;
             }
-            
+
             .profile-photo {
                 width: 120px;
                 height: 120px;
@@ -215,229 +205,574 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
- <!-- Left Sidebar -->
-<div class="sidebar">
-    <img src="mcnamara-headshot.jpg" alt="Calum McNamara" class="profile-photo">
-    <h1>Calum McNamara</h1>
-    
-    <p>I'm an Assistant Professor of Philosophy at <a href="https://philosophy.indiana.edu/index.html"> Indiana University, Bloomington</a>. Before coming to IU, I was a post-doc at <a href="https://philosophy.yale.edu">Yale</a>. I received my PhD from the <a href= "https://lsa.umich.edu/philosophy">University of Michigan</a>. To date, most of my work has been in decision theory and (formal) epistemology. More recently, I have begun working on topics in AI, particularly on AI alignment and interpretability.</p>
-    
-    <p><strong>Email:</strong><br>
-    calmcnam [at] iu [dot] edu</p>
-    
-    <p><strong>CV:</strong><br>
-    <a href="curriculum_vitae.pdf">Here</a></p>
-    
-    <p><strong>Links:</strong><br>
-    <a href="https://scholar.google.com/citations?user=9-ggsiMAAAAJ&hl=en&oi=ao">Google Scholar</a><br>
-    <a href="https://philpeople.org/profiles/calum-mcnamara">PhilPeople</a><br>
-    <a href="https://orcid.org/0000-0003-1032-073X">ORCID</a></br>
-    <a href="https://www.linkedin.com/in/calum-mcnamara-ab4421371/">LinkedIn</a></p>
-</div>
+
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <img
+                src="mcnamara-headshot.jpg"
+                alt="Calum McNamara"
+                class="profile-photo"
+            >
+
+            <h1>Calum McNamara</h1>
+
+            <p>
+                I'm an Assistant Professor of Philosophy at
+                <a href="https://philosophy.indiana.edu/index.html">
+                    Indiana University, Bloomington
+                </a>.
+                Before coming to IU, I was a post-doc at
+                <a href="https://philosophy.yale.edu">Yale</a>.
+                I received my PhD from the
+                <a href="https://lsa.umich.edu/philosophy">
+                    University of Michigan
+                </a>.
+                To date, most of my work has been in decision theory and
+                (formal) epistemology. More recently, I have begun working on
+                topics in AI, particularly on AI alignment and interpretability.
+            </p>
+
+            <p>
+                <strong>Email:</strong><br>
+                calmcnam [at] iu [dot] edu
+            </p>
+
+            <p>
+                <strong>CV:</strong><br>
+                <a href="curriculum_vitae.pdf">Here</a>
+            </p>
+
+            <p>
+                <strong>Links:</strong><br>
+                <a href="https://scholar.google.com/citations?user=9-ggsiMAAAAJ&amp;hl=en&amp;oi=ao">
+                    Google Scholar
+                </a><br>
+                <a href="https://philpeople.org/profiles/calum-mcnamara">
+                    PhilPeople
+                </a><br>
+                <a href="https://orcid.org/0000-0003-1032-073X">
+                    ORCID
+                </a><br>
+                <a href="https://www.linkedin.com/in/calum-mcnamara-ab4421371/">
+                    LinkedIn
+                </a>
+            </p>
+        </div>
 
         <!-- Main Content -->
-        
-      <div class="main-content">
+        <div class="main-content">
+            <h2>Papers</h2>
 
-           <h2>Papers</h2>
+            <div class="paper">
+                <div class="paper-title">
+                    Desire-as-Belief in Context
+                </div>
+                <div class="paper-venue">
+                    Mind, forthcoming
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: I give a context-sensitive version of the
+                    Desire-as-Belief Thesis and prove its tenability.
+                </div>
+            </div>
 
-<div class="paper">
-    <div class="paper-title">Desire-as-Belief in Context</div>
-    <div class="paper-venue">Mind, forthcoming </div>
-    <div class="paper-synopsis">Synopsis: I give a context-sensitive version of the Desire-as-Belief Thesis and prove its tenability.</div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    <a href="https://arxiv.org/abs/2602.08964">
+                        A Behavioural and Representationl Evaluation of
+                        Goal-Directedness in Language Model Agents
+                    </a>
+                </div>
+                <div class="paper-authors">
+                    Co-authored with
+                    <a href="https://glnmario.github.io">
+                        Mario Giulianelli
+                    </a>
+                    and 7 others.
+                </div>
+                <div class="paper-venue">
+                    Proceedings of the 43rd International Conference on Machine
+                    Learning (ICML), 2026
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: We develop a novel framework for interpreting what
+                    goals an AI system is pursuing.
+                </div>
+            </div>
 
-<div class="paper">
-    <div class="paper-title"><a href="https://arxiv.org/abs/2602.08964">A Behavioural and Representationl Evaluation of Goal-Directedness in Language Model Agents </a></div>
-    <div class="paper-authors">Co-authored with <a href="https://glnmario.github.io">Mario Giulianelli</a> and 7 others. </div>
-    <div class="paper-venue">Proceedings of the 43rd International Conference on Machine Learning (ICML), 2026 </div>
-    <div class="paper-synopsis">Synopsis: We develop a novel framework for interpreting what goals an AI system is pursuing.</div>
-</div>
-          
-<div class="paper">
-    <div class="paper-title"><a href="https://events.illc.uva.nl/AC/AC2024/Proceedings/">Dutch Books, Indicative Conditionals, and Rational Updating </a></div>
-    <div class="paper-authors">Co-authored with <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">Snow Zhang</a></div>
-    <div class="paper-venue">Proceedings of the 24th Annual Amsterdam Colloquium, 2025</div>
-    <div class="paper-synopsis">Synopsis: We discuss how you should update your credence in an indicative conditional, when you learn a piece of factual information. </div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    <a href="https://events.illc.uva.nl/AC/AC2024/Proceedings/">
+                        Dutch Books, Indicative Conditionals, and Rational Updating
+                    </a>
+                </div>
+                <div class="paper-authors">
+                    Co-authored with
+                    <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">
+                        Snow Zhang
+                    </a>
+                </div>
+                <div class="paper-venue">
+                    Proceedings of the 24th Annual Amsterdam Colloquium, 2025
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: We discuss how you should update your credence in
+                    an indicative conditional, when you learn a piece of factual
+                    information.
+                </div>
+            </div>
 
-          <div class="paper">
-    <div class="paper-title"><a href="https://philpapers.org/rec/MCNCDT">Causal Decision Theory, Context, and Determinism</a></div>
-    <div class="paper-venue">Philosophy and Phenomenological Research, 2024</div>
-    <div class="paper-synopsis">Synopsis: I respond to "deterministic" counterexamples to causal decision theory (CDT), by drawing attention to the fact that counterfactuals are context-sensitive.</div>
-</div>
-            
-        <div class="paper">
-    <div class="paper-title"><a href="https://link.springer.com/article/10.1007/s11229-022-03720-z">The Punctuated Equilibrium of Scientific Change: a Bayesian Network Model</a></div>
-    <div class="paper-authors">Co-authored with <a href="https://pgrim.org/">Patrick Grim</a> and 3 others.</div>
-    <div class="paper-venue">Synthese, 2022</div>
-    <div class="paper-synopsis">Synopsis: We use Bayesian networks to understand how evidence flows through scientific communities.</div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    <a href="https://philpapers.org/rec/MCNCDT">
+                        Causal Decision Theory, Context, and Determinism
+                    </a>
+                </div>
+                <div class="paper-venue">
+                    Philosophy and Phenomenological Research, 2024
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: I respond to "deterministic" counterexamples to
+                    causal decision theory (CDT), by drawing attention to the
+                    fact that counterfactuals are context-sensitive.
+                </div>
+            </div>
 
-<div class="paper">
-    <div class="paper-title"><a href="https://www.cambridge.org/core/journals/philosophy-of-science/article/scientific-theories-as-bayesian-nets-structure-and-evidence-sensitivity/9B69390BBAB54D42F6C5CADF93173BFC">Scientific Theories as Bayesian Nets: Structure and Evidence Sensitivity</a></div>
-    <div class="paper-authors">Co-authored with <a href="https://pgrim.org/">Patrick Grim</a> and 5 others.</div>
-    <div class="paper-venue">Philosophy of Science, 2022</div>
-    <div class="paper-synopsis">Synopsis: We show how scientific theories can be modeled as Bayesian networks.</div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    <a href="https://link.springer.com/article/10.1007/s11229-022-03720-z">
+                        The Punctuated Equilibrium of Scientific Change:
+                        a Bayesian Network Model
+                    </a>
+                </div>
+                <div class="paper-authors">
+                    Co-authored with
+                    <a href="https://pgrim.org/">Patrick Grim</a>
+                    and 3 others.
+                </div>
+                <div class="paper-venue">
+                    Synthese, 2022
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: We use Bayesian networks to understand how evidence
+                    flows through scientific communities.
+                </div>
+            </div>
 
-<h2>Work in Progress</h2>
+            <div class="paper">
+                <div class="paper-title">
+                    <a href="https://www.cambridge.org/core/journals/philosophy-of-science/article/scientific-theories-as-bayesian-nets-structure-and-evidence-sensitivity/9B69390BBAB54D42F6C5CADF93173BFC">
+                        Scientific Theories as Bayesian Nets:
+                        Structure and Evidence Sensitivity
+                    </a>
+                </div>
+                <div class="paper-authors">
+                    Co-authored with
+                    <a href="https://pgrim.org/">Patrick Grim</a>
+                    and 5 others.
+                </div>
+                <div class="paper-venue">
+                    Philosophy of Science, 2022
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: We show how scientific theories can be modeled as
+                    Bayesian networks.
+                </div>
+            </div>
 
-<div class="paper">
-    <div class="paper-title">A paper on deference and decision theory</div>
-    <div class="paper-venue">R&R (email me for a draft) </div>
-    <div class="paper-synopsis">Synopsis: I give some new results concerning causal decision theory and expert deference.</div>
-</div>
+            <h2>Work in Progress</h2>
 
-                      <div class="paper">
-    <div class="paper-title">A paper on decision theory and utilitarianism</div>
-    <div class="paper-venue">R&R (email me for a draft) </div>
-    <div class="paper-synopsis">Synopsis: I prove a version of Harsanyi's impartial observer theorem, in the suppositional decision theory setting.</div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    A paper on deference and decision theory
+                </div>
+                <div class="paper-venue">
+                    R&amp;R (email me for a draft)
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: I give some new results concerning causal decision
+                    theory and expert deference.
+                </div>
+            </div>
 
-<div class="paper">
-    <div class="paper-title">A paper on indicative conditionals and Dutch books</div>
-     <div class="paper-authors">Co-authored with <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">Snow Zhang</a></div>
-    <div class="paper-venue">under review (email me for a draft) </div>
-    <div class="paper-synopsis">Synopsis: We discuss how you should update your credence in an indicative conditional, when you learn a piece of factual information. (This is the full version of our paper in the Amsterdam proceedings.)</div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    A paper on decision theory and utilitarianism
+                </div>
+                <div class="paper-venue">
+                    R&amp;R (email me for a draft)
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: I prove a version of Harsanyi's impartial observer
+                    theorem, in the suppositional decision theory setting.
+                </div>
+            </div>
 
-<div class="paper">
-    <div class="paper-title">A paper on self-recommending decision theories</div>
-    <div class="paper-venue">under review (email me for a draft) </div>
-    <div class="paper-synopsis">Synopsis: I prove that no suppositional decision theory is self-recommending.</div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    A paper on indicative conditionals and Dutch books
+                </div>
+                <div class="paper-authors">
+                    Co-authored with
+                    <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">
+                        Snow Zhang
+                    </a>
+                </div>
+                <div class="paper-venue">
+                    under review (email me for a draft)
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: We discuss how you should update your credence in
+                    an indicative conditional, when you learn a piece of factual
+                    information. (This is the full version of our paper in the
+                    Amsterdam proceedings.)
+                </div>
+            </div>
 
-          <div class="paper">
-    <div class="paper-title">A paper on updating on conditionals</div>
-    <div class="paper-venue">under review (email me for a draft) </div>
-    <div class="paper-synopsis">Synopsis: I draw out a relationship between van Fraassen's Judy Benjamin Problem and Stalnaker's Thesis.</div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    A paper on self-recommending decision theories
+                </div>
+                <div class="paper-venue">
+                    under review (email me for a draft)
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: I prove that no suppositional decision theory is
+                    self-recommending.
+                </div>
+            </div>
 
-           <div class="paper">
-    <div class="paper-title">A paper on the Off-switch Game</div>
-    <div class="paper-venue">under review (email me for a draft) </div>
-    <div class="paper-synopsis">Synopsis: I prove a generalization of Hadfield-Menell et al.'s (2017) Off-switch Game result about AI alignment.</div>
-</div>
-          
+            <div class="paper">
+                <div class="paper-title">
+                    A paper on updating on conditionals
+                </div>
+                <div class="paper-venue">
+                    under review (email me for a draft)
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: I draw out a relationship between van Fraassen's
+                    Judy Benjamin Problem and Stalnaker's Thesis.
+                </div>
+            </div>
 
+            <div class="paper">
+                <div class="paper-title">
+                    A paper on the Off-switch Game
+                </div>
+                <div class="paper-venue">
+                    under review (email me for a draft)
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: I prove a generalization of Hadfield-Menell et al.'s
+                    (2017) Off-switch Game result about AI alignment.
+                </div>
+            </div>
 
-          <div class="paper">
-    <div class="paper-title"> <a href="https://arxiv.org/abs/2606.09475">Emergent Alignment and the Projectability of Ethical Personas</a></div>
-    <div class="paper-authors">Co-authored with <a href= "https://guillermodelpinal.squarespace.com/">Guillermo Del Pinal</a>, <a href = "https://www.umass.edu/philosophy/about/directory/youngchan-lee"> Youngchan Lee,</a> and <a href="https://perezcarballo.org/"> Alejandro Pérez Carballo</a></div>
-    <div class="paper-venue"><a href="https://arxiv.org/abs/2606.09475">arXiv</a> preprint</div>
-    <div class="paper-synopsis">Synopsis: We give empirical results demonstrating "emergent alignment" in Large Language Models.</div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    <a href="https://arxiv.org/abs/2606.09475">
+                        Emergent Alignment and the Projectability of Ethical Personas
+                    </a>
+                </div>
+                <div class="paper-authors">
+                    Co-authored with
+                    <a href="https://guillermodelpinal.squarespace.com/">
+                        Guillermo Del Pinal
+                    </a>,
+                    <a href="https://www.umass.edu/philosophy/about/directory/youngchan-lee">
+                        Youngchan Lee
+                    </a>,
+                    and
+                    <a href="https://perezcarballo.org/">
+                        Alejandro Pérez Carballo
+                    </a>
+                </div>
+                <div class="paper-venue">
+                    <a href="https://arxiv.org/abs/2606.09475">arXiv</a>
+                    preprint
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: We give empirical results demonstrating
+                    "emergent alignment" in Large Language Models.
+                </div>
+            </div>
 
+            <div class="paper">
+                <div class="paper-title">
+                    A paper on accuracy and epistemic modality
+                </div>
+                <div class="paper-authors">
+                    Co-authored with
+                    <a href="https://www.mikaylakelley.com/">
+                        Mikayla Kelley
+                    </a>,
+                    <a href="https://richard-roth.github.io/">
+                        Richard Roth
+                    </a>,
+                    and
+                    <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">
+                        Snow Zhang
+                    </a>
+                    (a.k.a. the
+                    <a href="accuvengers3.png">accu-vengers</a>)
+                </div>
+                <div class="paper-venue">
+                    in progress (draft soon!)
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: We investigate what happens to epistemic utility
+                    theory when we introduce epistemic modals and indicative
+                    conditionals.
+                </div>
+            </div>
 
-                   <div class="paper">
-    <div class="paper-title">A paper on accuracy and epistemic modality</div>
-              <div class="paper-authors">Co-authored with <a href="https://www.mikaylakelley.com/">Mikayla Kelley<a>, <a href="https://richard-roth.github.io/">Richard Roth</a>, and <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">Snow Zhang</a> (a.k.a. the <a href="accuvengers3.png"> accu-vengers</a>)</div>
-    <div class="paper-venue">in progress (draft soon!)</div>
-    <div class="paper-synopsis">Synopsis: We investigate what happens to epistemic utility theory when we introduce epistemic modals and indicative conditionals.</div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    A paper on the Everett interpretation of quantum mechanics
+                </div>
+                <div class="paper-authors">
+                    Co-authored with
+                    <a href="https://alexandermeehan.weebly.com/">
+                        Alexander Meehan
+                    </a>
+                </div>
+                <div class="paper-venue">
+                    in progress (draft soon!)
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: We prove a new "quantum representation theorem" for
+                    the Born rule in Everettian quantum mechanics.
+                </div>
+            </div>
 
-                  <div class="paper">
-    <div class="paper-title">A paper on the Everett interpretation of quantum mechanics</div>
-    <div class="paper-authors">Co-authored with <a href="https://alexandermeehan.weebly.com/">Alexander Meehan</a></div>
-    <div class="paper-venue">in progress (draft soon!)</div>
-    <div class="paper-synopsis">Synopsis: We prove a new "quantum representation theorem" for the Born rule in Everettian quantum mechanics. </div>
-</div>
+            <div class="paper">
+                <div class="paper-title">
+                    A paper on dynamic deliberation and game-theoretic
+                    solution concepts
+                </div>
+                <div class="paper-authors">
+                    Co-authored with
+                    <a href="https://www.clara-bradley.com/">
+                        Clara Bradley
+                    </a>
+                </div>
+                <div class="paper-venue">
+                    in progress (draft soon!)
+                </div>
+                <div class="paper-synopsis">
+                    Synopsis: We show that different game-theoretic solution
+                    concepts can derived from different assumptions about
+                    rational deliberation in games.
+                </div>
+            </div>
+        </div>
 
-                  <div class="paper">
-    <div class="paper-title">A paper on dynamic deliberation and game-theoretic solution concepts</div>
-    <div class="paper-authors">Co-authored with <a href="https://www.clara-bradley.com/">Clara Bradley</a></div>
-    <div class="paper-venue">in progress (draft soon!)</div>
-    <div class="paper-synopsis">Synopsis: We show that different game-theoretic solution concepts can derived from different assumptions about rational deliberation in games. </div>
-</div>
+        <!-- Right Column -->
+        <div class="right-column">
+            <h3>Teaching</h3>
 
-                   
-<!-- Right Column -->
-<div class="right-column">
-    <h3>Teaching</h3>
+            <p>
+                <strong>Current Teaching (ESSLLI 2026)</strong>
+            </p>
 
-    <p><strong>Current Teaching (ESSLLI 2026)</strong></p>
-    <p>
-        Lecture Slides: <a href="lecture-1.pdf">Day 1</a>
-    </p>
+            <p>
+                Lecture Slides:
+                <a href="lecture-1.pdf">Day 1</a>
+            </p>
 
-    <p><strong>Office Hours (Fall 2026)</strong></p>
-    <p>
-        Time TBD<br>
-        Room 107, Sycamore Hall
-    </p>
+            <p>
+                <strong>Office Hours (Fall 2026)</strong>
+            </p>
 
-    <p><strong>Previous Courses Taught</strong></p>
+            <p>
+                Time TBD<br>
+                Room 107, Sycamore Hall
+            </p>
 
-    <p>
-        <strong>P105:</strong> Philosophy of Mind (Indiana).
-        <a href="mind-syllabus.pdf">Syllabus.</a>
-    </p>
+            <p>
+                <strong>Previous Courses Taught</strong>
+            </p>
 
-    <p>
-        <strong>P360:</strong> Critical Reasoning (Indiana).
-        <a href="critical-reasoning-spring-26.pdf">Syllabus.</a>
-    </p>
+            <p>
+                <strong>P105:</strong>
+                Philosophy of Mind (Indiana).
+                <a href="mind-syllabus.pdf">Syllabus.</a>
+            </p>
 
-    <p>
-        <strong>P352:</strong> Logic and Philosophy (Indiana).
-        <a href="iu-formal-methods-syllabus.pdf">Syllabus.</a>
-    </p>
+            <p>
+                <strong>P360:</strong>
+                Critical Reasoning (Indiana).
+                <a href="critical-reasoning-spring-26.pdf">Syllabus.</a>
+            </p>
 
-    <p>
-        <strong>P105:</strong> Critical Reasoning (Indiana).
-        <a href="iu-critical-reasoning-syllabus.pdf">Syllabus.</a>
-    </p>
+            <p>
+                <strong>P352:</strong>
+                Logic and Philosophy (Indiana).
+                <a href="iu-formal-methods-syllabus.pdf">Syllabus.</a>
+            </p>
 
-    <p>
-        <strong>Phil 210/510:</strong> Formal Philosophical Methods (Yale).
-        <a href="yale-formal-methods-syllabus.pdf">Syllabus;</a>
-        <a href="formal-methods-handouts-yale.pdf">handouts.</a>
-    </p>
+            <p>
+                <strong>P105:</strong>
+                Critical Reasoning (Indiana).
+                <a href="iu-critical-reasoning-syllabus.pdf">Syllabus.</a>
+            </p>
 
-    <p>
-        <strong>Phil 115:</strong> First-order Logic (Yale).
-        <a href="yale-logic-syllabus.pdf">Syllabus.</a>
-    </p>
+            <p>
+                <strong>Phil 210/510:</strong>
+                Formal Philosophical Methods (Yale).
+                <a href="yale-formal-methods-syllabus.pdf">Syllabus;</a>
+                <a href="formal-methods-handouts-yale.pdf">handouts.</a>
+            </p>
 
-    <p>
-        <strong>Phil 303:</strong> Introduction to Symbolic Logic (Michigan).
-        <a href="michigan-logic-syllabus.pdf">Syllabus.</a>
-    </p>
-</div>
-            
-            
-           <h3>News & Updates</h3>
-            
-<p><strong>August 2026:</strong> I'll be teaching a course on decision theory and conditionals at <a href="https://2026.esslli.eu/">European Summer School in Logic, Language, and Information (ESSLLI)</a> with <a href="https://paolosantorio.net/"> Paolo Santorio</a> in Prague.
+            <p>
+                <strong>Phil 115:</strong>
+                First-order Logic (Yale).
+                <a href="yale-logic-syllabus.pdf">Syllabus.</a>
+            </p>
 
-<p><strong>July 2026:</strong> I finally get to make this public: I have been awarded a Technical AI Upskilling grant from Coefficient Giving, for the academic year 2026/27!
+            <p>
+                <strong>Phil 303:</strong>
+                Introduction to Symbolic Logic (Michigan).
+                <a href="michigan-logic-syllabus.pdf">Syllabus.</a>
+            </p>
 
-<p><strong>July 2026:</strong> I'll be giving a talk on my paper on Dutch books and Indicative conditionals, co-authored with <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">Snow Zhang</a>, at ANU.</a>
-            
-<p><strong>July 2026:</strong> My paper "Desire-as-Belief in Context" has been accepted for publication at <i>Mind</i>. </a>
-            
-<p><strong>July 2026:</strong> I will be a visitor at the Australian National University.</a>
+            <h3>News &amp; Updates</h3>
 
-<p><strong>June 2026:</strong> I'll be talking about my paper on Harsanyi's impartial observer theorem at the <a href="https://sites.google.com/view/few-2026/"> Formal Epistemology Workshop</a> in Boulder, Colorado.
+            <p>
+                <strong>August 2026:</strong>
+                I'll be teaching a course on decision theory and conditionals at
+                <a href="https://2026.esslli.eu/">
+                    European Summer School in Logic, Language, and Information
+                    (ESSLLI)
+                </a>
+                with
+                <a href="https://paolosantorio.net/">Paolo Santorio</a>
+                in Prague.
+            </p>
 
-<p><strong>June 2026:</strong> New preprint available! <a href="https://arxiv.org/abs/2606.09475"> "Emergent Alignment and the Projectability of Ethical Personas"</a>, co-authored with <a href= "https://guillermodelpinal.squarespace.com/">Guillermo Del Pinal</a>, <a href = "https://www.umass.edu/philosophy/about/directory/youngchan-lee"> Youngchan Lee</a>, and <a href="https://perezcarballo.org/"> Alejandro Pérez Carballo</a>.
+            <p>
+                <strong>July 2026:</strong>
+                I finally get to make this public: I have been awarded a
+                Technical AI Upskilling grant from Coefficient Giving, for the
+                academic year 2026/27!
+            </p>
 
-<p><strong>April 2026:</strong> The paper I helped write with my SPAR group has been accepted at ICML! <a href="https://arxiv.org/abs/2602.08964">(arXiv)</a>
-                  
-<p><strong>March 2026:</strong> I won an IU Global Faculty Grant to visit the Australian National University this Summer.</a>                  
-            
-<p><strong>March 2026:</strong> I won a the Jesse Fine fellowship to develop a new course on the Philosophy of AI at IU.</a>
-            
-<p><strong>March 2026:</strong> New paper on AI accepted at two ICLR workshops! <a href="https://arxiv.org/abs/2602.08964">(arXiv)</a>
-    
-<p><strong>February 2026:</strong> Project Telos has a new blog post, summarizing the results of our first paper. See <a href="https://projecttelos.substack.com/p/a-behavioural-and-representational?r=5zq9e7&utm_campaign=post&utm_medium=web&triedRedirect=true">here</a>.
-    
-<p><strong>February 2026:</strong> <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">Snow Zhang</a> will be presenting our co-authored paper at the <a href="https://www.apaonline.org/mpage/2026central">Central APA</a> in Chicago. <a href="https://www.mikaylakelley.com/">Mikayla Kelley</a> and <a href="https://richard-roth.github.io/">Richard Roth</a> are also co-authors (and they'll be there, too).</p>
+            <p>
+                <strong>July 2026:</strong>
+                I'll be giving a talk on my paper on Dutch books and Indicative
+                conditionals, co-authored with
+                <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">
+                    Snow Zhang
+                </a>,
+                at ANU.
+            </p>
 
-<p><strong>February 2026:</strong> The paper on AI that I helped write as part of a SPAR project is now available online. <a href="https://arxiv.org/abs/2602.08964">Here</a> is the arXiv link.
-</div>
+            <p>
+                <strong>July 2026:</strong>
+                My paper "Desire-as-Belief in Context" has been accepted for
+                publication at <i>Mind</i>.
+            </p>
+
+            <p>
+                <strong>July 2026:</strong>
+                I will be a visitor at the Australian National University.
+            </p>
+
+            <p>
+                <strong>June 2026:</strong>
+                I'll be talking about my paper on Harsanyi's impartial observer
+                theorem at the
+                <a href="https://sites.google.com/view/few-2026/">
+                    Formal Epistemology Workshop
+                </a>
+                in Boulder, Colorado.
+            </p>
+
+            <p>
+                <strong>June 2026:</strong>
+                New preprint available!
+                <a href="https://arxiv.org/abs/2606.09475">
+                    "Emergent Alignment and the Projectability of Ethical Personas"
+                </a>,
+                co-authored with
+                <a href="https://guillermodelpinal.squarespace.com/">
+                    Guillermo Del Pinal
+                </a>,
+                <a href="https://www.umass.edu/philosophy/about/directory/youngchan-lee">
+                    Youngchan Lee
+                </a>,
+                and
+                <a href="https://perezcarballo.org/">
+                    Alejandro Pérez Carballo
+                </a>.
+            </p>
+
+            <p>
+                <strong>April 2026:</strong>
+                The paper I helped write with my SPAR group has been accepted
+                at ICML!
+                <a href="https://arxiv.org/abs/2602.08964">(arXiv)</a>
+            </p>
+
+            <p>
+                <strong>March 2026:</strong>
+                I won an IU Global Faculty Grant to visit the Australian
+                National University this Summer.
+            </p>
+
+            <p>
+                <strong>March 2026:</strong>
+                I won a the Jesse Fine fellowship to develop a new course on
+                the Philosophy of AI at IU.
+            </p>
+
+            <p>
+                <strong>March 2026:</strong>
+                New paper on AI accepted at two ICLR workshops!
+                <a href="https://arxiv.org/abs/2602.08964">(arXiv)</a>
+            </p>
+
+            <p>
+                <strong>February 2026:</strong>
+                Project Telos has a new blog post, summarizing the results of
+                our first paper. See
+                <a href="https://projecttelos.substack.com/p/a-behavioural-and-representational?r=5zq9e7&amp;utm_campaign=post&amp;utm_medium=web&amp;triedRedirect=true">
+                    here
+                </a>.
+            </p>
+
+            <p>
+                <strong>February 2026:</strong>
+                <a href="https://sites.google.com/berkeley.edu/xueyin-snow-zhang">
+                    Snow Zhang
+                </a>
+                will be presenting our co-authored paper at the
+                <a href="https://www.apaonline.org/mpage/2026central">
+                    Central APA
+                </a>
+                in Chicago.
+                <a href="https://www.mikaylakelley.com/">
+                    Mikayla Kelley
+                </a>
+                and
+                <a href="https://richard-roth.github.io/">
+                    Richard Roth
+                </a>
+                are also co-authors (and they'll be there, too).
+            </p>
+
+            <p>
+                <strong>February 2026:</strong>
+                The paper on AI that I helped write as part of a SPAR project
+                is now available online.
+                <a href="https://arxiv.org/abs/2602.08964">Here</a>
+                is the arXiv link.
+            </p>
+        </div>
+
+    </div>
 </body>
 </html>
