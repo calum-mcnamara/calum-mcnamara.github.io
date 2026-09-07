@@ -18,31 +18,39 @@
 
     <title>Calum McNamara</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&amp;family=Source+Serif+4:opsz,wght@8..60,600&amp;display=swap"
+        rel="stylesheet"
+    >
+
     <style>
         body {
-            font-family: Georgia, serif;
-            line-height: 1.5;
+            font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont,
+                "Segoe UI", sans-serif;
+            line-height: 1.58;
             margin: 0;
             padding: 20px;
-            color: #333;
+            color: #292826;
             background-color: #fff;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 40px auto 0;
+            max-width: 1120px;
+            margin: 44px auto 0;
             display: flex;
-            gap: 30px;
+            gap: 40px;
             align-items: flex-start;
         }
 
         /* Left Sidebar */
         .sidebar {
-            width: 200px;
+            width: 210px;
             flex-shrink: 0;
-            border-right: 1px solid #ddd;
-            padding-right: 20px;
+            border-right: 1px solid #e8e5df;
+            padding-right: 28px;
         }
 
         .profile-photo {
@@ -57,21 +65,25 @@
         }
 
         .sidebar h1 {
-            font-size: 1.4em;
-            font-weight: bold;
-            margin: 0 0 10px;
-            color: #222;
+            font-family: "Source Serif 4", Georgia, serif;
+            font-size: 1.65rem;
+            line-height: 1.15;
+            font-weight: 600;
+            margin: 0 0 12px;
+            color: #242321;
         }
 
         .sidebar p {
             margin: 8px 0;
-            font-size: 13px;
-            line-height: 1.4;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         .sidebar a {
-            color: #0066cc;
+            color: #315f82;
             text-decoration: none;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 1px;
         }
 
         .sidebar a:hover {
@@ -82,14 +94,17 @@
         .main-content {
             flex: 1;
             min-width: 0;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         h2 {
-            font-size: 1.3em;
-            font-weight: bold;
-            margin: 30px 0 20px;
-            color: #222;
+            font-family: "Source Serif 4", Georgia, serif;
+            font-size: 1.45rem;
+            line-height: 1.2;
+            font-weight: 600;
+            margin: 36px 0 18px;
+            color: #242321;
+            letter-spacing: -0.01em;
         }
 
         h2:first-of-type {
@@ -97,36 +112,39 @@
         }
 
         .paper {
-            margin-bottom: 20px;
-            line-height: 1.4;
+            margin-bottom: 28px;
+            line-height: 1.5;
         }
 
         .paper-title {
             font-weight: bold;
-            color: #0066cc;
-            font-size: 14px;
+            color: #315f82;
+            font-size: 16px;
+            line-height: 1.35;
         }
 
         .paper-authors {
             margin: 3px 0;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .paper-venue {
             margin: 3px 0;
             font-style: italic;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .paper-synopsis {
-            margin: 3px 0;
-            color: #555;
-            font-size: 14px;
+            margin: 6px 0 3px;
+            color: #595753;
+            font-size: 15px;
         }
 
         a {
-            color: #0066cc;
+            color: #315f82;
             text-decoration: none;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 1px;
         }
 
         a:hover {
@@ -135,18 +153,21 @@
 
         /* Right Column */
         .right-column {
-            width: 250px;
+            width: 235px;
             flex-shrink: 0;
-            border-left: 1px solid #ddd;
-            padding-left: 20px;
-            font-size: 13px;
+            border-left: 1px solid #e8e5df;
+            padding-left: 28px;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         .right-column h3 {
-            font-size: 1.2em;
-            font-weight: bold;
+            font-family: "Source Serif 4", Georgia, serif;
+            font-size: 1.25rem;
+            line-height: 1.2;
+            font-weight: 600;
             margin: 0 0 15px;
-            color: #222;
+            color: #242321;
         }
 
         .right-column h3:not(:first-child) {
@@ -162,7 +183,7 @@
         @media (max-width: 900px) {
             .container {
                 flex-direction: column;
-                gap: 20px;
+                gap: 24px;
             }
 
             .sidebar {
@@ -195,7 +216,7 @@
         @media (max-width: 600px) {
             body {
                 padding: 15px;
-                font-size: 13px;
+                font-size: 15px;
             }
 
             .profile-photo {
@@ -677,7 +698,8 @@
             <p>
                 <strong>July 2026:</strong>
                 I finally get to make this public: I have been awarded a
-                Technical AI Upskilling grant from Coefficient Giving, for the
+                Technical AI Upskilling grant from
+                <a href="https://coefficientgiving.org/">Coefficient Giving</a>, for the
                 academic year 2026/27!
             </p>
 
